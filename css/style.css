@@ -4,18 +4,16 @@ body {
     box-sizing: border-box;
     margin: 0px;
     font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
 }
 /* navbar */
 .navbar {
     padding: 16px;
     background-color: #efefef;
-    position: fixed;
 }
 .container-fluid{
     padding-left: 32px;
     padding-right: 32px;
-    /* padding-top: 10px;
-    padding-bottom: 10px; */
 }
 .navbar-brand {
     padding: 10px 0px;
@@ -80,13 +78,11 @@ body {
 /* top section  */
 .top-section {
     background-image: url(../images/classwork\ 3.jpg);
-    /* height: 100vh; */
     margin-top: 50px;
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 10rem;
     padding-bottom: 10rem;
-    /* opacity: 1; */
 }
 .top-container {
     margin-left: 104px;
@@ -146,6 +142,35 @@ body {
     background-color: #fff !important;
     border-color: #fff !important;
     color: #1b2026;
+}
+@media (max-width:890px){
+    body{
+        overflow-x: hidden;
+        width: 100%;
+    }
+    .navbar {
+        padding: 0;
+        width: 100%;
+    }
+    .top-section {
+        background: linear-gradient(#000a, #000a), url(../images/phoneBg.jfif);
+        /* margin-top: 50px; */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* overflow: hidden; */
+        /* padding-top: 10rem;
+        padding-bottom: 10rem; */
+    }
+    .top-container {
+        margin: 0 50px;
+        padding-left: 16px;
+        padding-right: 16px;
+        text-align: center;
+    }
+    #top-sect-text p {
+        color: #efefef;
+    }
 }
 /* section 1  */ 
 .section-1 {
@@ -227,7 +252,6 @@ body {
 }
 .section-1 .container .card-text-wrapper .btn-sec .btn {
     padding: 1rem 2.6rem;
-    /* margin: 0.6rem; */
     background-color: #dce8eb;
     font-size: 1rem;
     color: #1b2026;
@@ -441,6 +465,71 @@ body {
 .appIntegrations .container .card .card-wrapper:hover .iconwrapper{
     background-color: #f7d9c4;
 }
+/* fun fact section */
+.funFacts {
+    background-color: #efefef;
+    padding: 5rem 0; 
+}
+.funFacts .container,
+.funFacts .container .img-wrapper{
+    padding: 0 1rem;  
+}
+.funFacts .container .img-wrapper img {
+    width: 90%;
+    border-radius: 10px;
+}
+.funFacts .container h3,
+.funFacts .container p {
+    font-size: 1.1rem;
+    color: #777;
+    line-height: 1.5;
+}
+.funFacts .container h2 {
+    font-size: 3.8rem;
+    color: #232323;
+    line-height: 1.1;
+}
+.funFacts .container .card{
+    background-color: transparent;
+    border: none;
+}
+.funFacts .container .card-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.funFacts .container .card-wrapper .icon-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    min-width: 70px;
+    height: 70px;
+    border-radius: 50%; 
+    font-size: 1.8rem;
+} 
+.funFacts .container .card:first-of-type i{
+    color:#8bd176;
+}
+.funFacts .container .card:last-of-type i{
+    color:#ff6666;
+}
+.funFacts .container .card-wrapper .card-text{
+    width: fit-content;
+    min-width: 170px;
+    padding-left: 1.5rem;
+} 
+.funFacts .container .card-wrapper .card-text h4{
+    margin-bottom: 0.5rem;
+    font-size: 3.1rem;
+    line-height: 1.1;
+} 
+.funFacts .container .card-wrapper .card-text h5{
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #777;
+} 
 /* Our goals section  */
 .section-goal {
     padding: 5rem 0;
@@ -488,4 +577,322 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+/* careers section  */
+.career {
+    padding: 8rem 0;
+    background-color: #1b2026;
+}
+.career .card-wrapper {
+    padding: 4rem;
+    margin: 0 1rem; 
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+}
+.career .card-wrapper h2 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #777; 
+}
+.career .card-wrapper h1 {
+    margin-bottom: 2rem;
+    font-size: 3.8rem;
+    line-height: 1.1;
+    color: #1b2026; 
+}
+.career .card-wrapper .button {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #efefef;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+}
+.career .card-wrapper .button .icon-text{
+    display: flex;
+}
+.career .card-wrapper .button i {
+    font-size: 1.5rem;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    color: #777;
+    padding: 0;
+}
+.career .card-wrapper .button p {
+    font-size: 1.1rem;
+    margin-top: 0;
+    line-height: 1.5;
+    color: #777;
+    padding: 3px 0 0;
+}
+@media (max-width:600px){
+    .career .card-wrapper {
+        padding: 1rem;
+        margin: 0 0.2rem; 
+        background-color: white;
+        border-radius: 10px;
+    }
+    .career .card-wrapper h1 {
+        font-size: 3rem;
+    }
+}
+/* section view in action */
+.image-view {
+    padding: 60px 0;
+    background-color: #dce8eb;
+}
+.image-view .img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.image-view .img img{
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 16px;
+}
+.image-view .wrapper {
+    padding: 1rem 2rem; 
+    width: 90%;
+    border-radius: 1rem;
+    background-color: #fff;
+    position: relative;
+    z-index: 4;
+    margin: -3rem auto auto;
+}
+.image-view .wrapper .img-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0 15px; 
+    flex: 0 0 20%;
+}
+.image-view .wrapper .img-text h3  {
+    color: #777;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+.image-view .wrapper .img-text h2  {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #31363b;
+}
+.image-view .wrapper .img-text button  {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #fff;
+    padding: 1rem 2.6rem; 
+    background-color: #232323;
+    border-radius: 4px;
+}
+.image-view .wrapper .img-text button  a{
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width:990px){
+    .image-view .wrapper .img-text {
+        display: block;
+    }
+}
+/* teams members sections */
+.team-members  {
+    padding: 5rem 0;
+    background-color: #efefef; 
+}
+.team-members .container p {
+    color: #777777; 
+    text-align: center;
+}
+.team-members .container h3 {
+    font-size: 3.8rem;
+    text-align: center;
+}
+.team-members .container .card-wrapper {
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+    padding-top: 3rem;
+}
+.team-members .container .card-wrapper img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: auto;
+    border-radius: 50%;
+}
+.team-members .container .card-wrapper .description{
+    padding: 2rem 2rem 0;
+}
+.team-members .container .card-wrapper .description h5{
+    font-size: 1.6rem;
+}
+.team-members .container .card-wrapper .description h6{
+    font-size: 1.1rem;
+    color: #777777;
+}
+.team-members .container .card-wrapper .description .icon-wrapper{
+    padding-top: 2rem;
+}
+.team-members .container .card-wrapper .description .icon-wrapper .icon{ 
+    display: inline-block;
+    text-align: center;
+    border-top-right-radius: 30%;
+    border-top-left-radius: 30%;
+    margin-right: 0.6rem;
+    padding: 0.8rem;
+    background: #efefef;
+    transition: all 0.3s;
+}
+.team-members .container .card-wrapper .description .icon-wrapper .icon:hover{ 
+    background-color: #f7d9c4; 
+    color: white;
+}
+.specific {
+    padding: 6rem 0;
+}
+.specific img{
+    width: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    border: 10px solid #ffffff;
+    border-radius: 10px;
+}
+.specific .row {
+    background-color: #dce8eb;
+    border-radius: 10px;
+}
+.specific .description{
+    padding: 4rem 4rem;
+}
+.specific .description h5 {
+    font-size: 3.1rem;
+    line-height: 1.1;
+}
+.specific .description p {
+    font-size: 1.1rem;
+    line-height: 2.5;
+    color: #777;
+    text-align: left;
+}
+.specific .description .icon {
+    display: inline-block;
+    text-align: center;
+    border-radius: 1rem;
+    margin-right: 0.6rem;
+    margin-bottom: 1rem;
+    padding: 1.3rem;
+    background: #ffffff;
+    transition: all 0.3s;
+    color: #777;
+}
+.specific .description .icon:hover{
+    color: #fff;
+    background-color: #f7d9c4;
+}
+/* clients section  */
+.clients{
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+    background-color: #14191e;
+}
+.clients .row {
+    background: #ffffff;
+    padding: 3rem 1rem;
+    margin: 0rem;
+    position: relative;
+    border-radius: 15px;
+    justify-content: center;
+}
+.clients .row::before {
+    content: '';
+    width: 92%;
+    height: 2rem;
+    position: absolute;
+    background-color: #31363b;
+    bottom: -2rem;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.clients .row .img{
+    height: fit-content;
+    opacity: 0.7;
+    padding: 0;
+    margin-bottom: 1rem;
+    display: flex;
+    transition: all 0.3s;
+}
+.clients .row .img img{
+    width: 60%;
+    margin: auto;
+}
+.clients .row .img:hover img{
+    animation-name: slidein;
+    animation-duration: 0.3s;
+}
+@keyframes slidein {
+    50% {
+        transform: translateY(-100%);
+    }
+    51% {
+        transform: translateY(100%);
+    }
+    
+    100% {
+        transform: translateY(0%);
+    }
+}
+/* feedback section */
+.feedback{  
+    background-color: #31363b;
+    padding: 4rem 0;
+    text-align: center;
+}
+.feedback .container h3 {
+    line-height: 1.1;
+    color: #fff;
+    font-size: 3.8rem;
+}
+.feedback .container p {
+    line-height: 1.1;
+    color: #bbb;
+    font-size: 1.1rem;
+}
+.feedback .carousel-item {
+    margin-left: 25%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-color: white;   
+    padding: 2.5rem;
+    width: 50%;
+}
+.feedback .carousel-item p {
+    line-height: 1.5;
+    color: #777;
+    font-size: 1.6rem;
+}
+.feedback .carousel-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -35px;
+    right: -35px;
+}
+@media (max-width:767px){
+    .feedback .carousel-item {
+        margin-left: 15%;
+        width: 70%;
+        text-align: left;
+    }
 }
